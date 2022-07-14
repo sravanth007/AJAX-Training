@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PHP AJAX Demo</title>
+  </head>
+  <body>
+    <script>
+    var data = new FormData();
+    data.append("KEY", "VALUE");
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "2b-form.php");
+    xhr.onload = function () {
+      console.log(this.status);
+      console.log(this.response);
+    };
+    xhr.send(data);
+    </script>
+  </body>
+</html>

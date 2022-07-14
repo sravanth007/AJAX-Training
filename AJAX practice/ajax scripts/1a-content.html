@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PHP AJAX Demo</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+    <script>
+    fetch("1b-content.php")
+    .then(res => res.text())
+    .then((txt) => {
+      document.getElementById("wrapper").innerHTML = txt;
+    })
+    .catch((err) => { console.error(err); })
+    .finally(() =>{ console.log("FINALLY"); });
+    </script>
+  </body>
+</html>
